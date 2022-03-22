@@ -75,7 +75,7 @@ module Searchkick
           raise Error, "Multiple clients found - set Searchkick.client_type = :elasticsearch or :opensearch"
         elsif defined?(OpenSearch::Client)
           :opensearch
-        elsif defined?(Elasticsearch::Client)
+        elsif defined?(::Elasticsearch::Client)
           :elasticsearch
         else
           raise Error, "No client found - install the `elasticsearch` or `opensearch-ruby` gem"
